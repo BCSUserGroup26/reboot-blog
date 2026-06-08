@@ -1,81 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REBOOT Development Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REBOOT Development Blog</title>
 
-<link rel="stylesheet" href="assets/style.css">
-<script defer src="assets/script.js"></script>
-
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header>
+<header class="navbar">
+    <div class="logo">REBOOT</div>
 
-<div class="logo">
-REBOOT
-</div>
-
-<nav>
-<a href="/">Home</a>
-<a href="#posts">Blog</a>
-<a href="#progress">Progress</a>
-</nav>
-
+    <nav>
+        <a href="#">Home</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#blogs">Blogs</a>
+    </nav>
 </header>
 
 <section class="hero">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<h1>REBOOT Development Blog</h1>
+        <span class="tag">
+            Development Blog
+        </span>
 
-<p>
-Follow the development of REBOOT from Chapter 1 to release.
-</p>
+        <h1>
+            REBOOT
+        </h1>
 
-<a class="button" href="blog/chapter1/">
-Read Latest Update
-</a>
+        <p>
+            Follow the development of REBOOT from
+            Chapter 1 all the way to release.
+        </p>
 
-</div>
+        <a href="blog/chapter1/" class="button">
+            Read Latest Blog
+        </a>
+
+    </div>
+
+</section>
+
+<section id="roadmap" class="section">
+
+    <h2>Development Roadmap</h2>
+
+    <div class="timeline">
+
+        <div class="node complete">
+            <div class="dot"></div>
+            <div class="card">
+                <h3>Chapter 1</h3>
+                <p>Completed</p>
+            </div>
+        </div>
+
+        <div class="node current">
+            <div class="dot"></div>
+            <div class="card">
+                <h3>Chapter 1.5</h3>
+                <p>Current Progress</p>
+            </div>
+        </div>
+
+        <div class="node"><div class="dot"></div><div class="card"><h3>Chapter 2</h3></div></div>
+        <div class="node"><div class="dot"></div><div class="card"><h3>Chapter 3</h3></div></div>
+        <div class="node"><div class="dot"></div><div class="card"><h3>Chapter 4</h3></div></div>
+        <div class="node"><div class="dot"></div><div class="card"><h3>Chapter 5</h3></div></div>
+        <div class="node"><div class="dot"></div><div class="card"><h3>Chapter 6</h3></div></div>
+        <div class="node"><div class="dot"></div><div class="card"><h3>Chapter 7</h3></div></div>
+        <div class="node"><div class="dot"></div><div class="card"><h3>Chapter 8</h3></div></div>
+        <div class="node"><div class="dot"></div><div class="card"><h3>Final Touches</h3></div></div>
+
+    </div>
 
 </section>
 
-<section id="progress">
+<section id="blogs" class="section">
 
-<h2>Development Progress</h2>
+    <h2>Latest Blogs</h2>
 
-<div id="progress-container"></div>
+    <div id="blog-list" class="blog-grid">
 
-</section>
-
-<section id="posts">
-
-<h2>Latest Updates</h2>
-
-<div class="card-grid">
-
-<a href="blog/chapter1/" class="card">
-
-<img src="assets/chapter1.png">
-
-<div class="card-content">
-
-<h3>REBOOT Chapter 1 Finished</h3>
-
-<p>
-UI, movement and chapter progression systems completed.
-</p>
-
-</div>
-
-</a>
-
-</div>
+    </div>
 
 </section>
+
+<script src="assets/script.js"></script>
 
 </body>
 </html>
