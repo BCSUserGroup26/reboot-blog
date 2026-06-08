@@ -1,71 +1,33 @@
-const chapters = [
-{
-name:"Chapter 1",
-progress:100
-},
-{
-name:"Chapter 2",
-progress:0
-},
-{
-name:"Chapter 3",
-progress:0
-},
-{
-name:"Chapter 4",
-progress:0
-},
-{
-name:"Chapter 5",
-progress:0
-},
-{
-name:"Chapter 6",
-progress:0
-},
-{
-name:"Chapter 7",
-progress:0
-},
-{
-name:"Chapter 8",
-progress:0
-},
-{
-name:"Final Touches",
-progress:0
-}
-];
+fetch("/blogs.json")
+.then(response => response.json())
+.then(blogs => {
 
-document.addEventListener("DOMContentLoaded",()=>{
+    const container =
+        document.getElementById("blog-list");
 
-const container =
-document.getElementById("progress-container");
+    if(!container) return;
 
-if(!container) return;
+    blogs.forEach(blog => {
 
-chapters.forEach(chapter=>{
+        const card =
+            document.createElement("a");
 
-const row =
-document.createElement("div");
+        card.className =
+            "blog-card";
 
-row.className =
-"progress-row";
+        card.href =
+            blog.url;
 
-row.innerHTML = `
-<span>
-${chapter.name}
-</span>
+        card.innerHTML = `
+            <img src="${blog.thumbnail}">
+            <div class="blog-info">
+                <h3>${blog.title}</h3>
+                <p>${blog.date}</p>
+            </div>
+        `;
 
-<div class="bar">
-<div class="fill"
-style="width:${chapter.progress}%">
-</div>
-</div>
-`;
+        container.appendChild(card);
 
-container.appendChild(row);
-
-});
+    });
 
 });
