@@ -1,141 +1,183 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:Inter,Arial,sans-serif;
-background:#ffffff;
-color:#111;
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#ffffff;
+    color:#111;
 }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:white;
-border-bottom:1px solid #ddd;
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 10%;
+    border-bottom:1px solid #ececec;
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 .logo{
-font-size:32px;
-font-weight:800;
-color:#58c42d;
+    font-size:32px;
+    font-weight:800;
 }
 
 nav{
-display:flex;
-gap:25px;
+    display:flex;
+    gap:30px;
 }
 
 nav a{
-text-decoration:none;
-color:#111;
-font-weight:600;
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
 }
 
 .hero{
-height:500px;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:#f4f4f4;
-}
-
-.hero-content{
-max-width:700px;
+    padding:120px 10%;
+    text-align:center;
+    background:#fafafa;
 }
 
 .hero h1{
-font-size:4rem;
-margin-bottom:20px;
+    font-size:72px;
+    margin:20px 0;
 }
 
 .hero p{
-font-size:1.2rem;
-margin-bottom:30px;
+    max-width:650px;
+    margin:auto;
+    line-height:1.8;
+    color:#666;
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:50px;
+    background:#f0f0f0;
 }
 
 .button{
-background:#58c42d;
-color:white;
-padding:15px 30px;
-border-radius:10px;
-text-decoration:none;
+    display:inline-block;
+    margin-top:30px;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    padding:14px 22px;
+    border-radius:12px;
 }
 
-section{
-padding:70px 10%;
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 30px;
 }
 
-.card-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-gap:30px;
+.section h2{
+    margin-bottom:40px;
+    font-size:36px;
+}
+
+.timeline{
+    border-left:4px solid #e2e2e2;
+    padding-left:40px;
+}
+
+.node{
+    position:relative;
+    margin-bottom:35px;
+}
+
+.dot{
+    position:absolute;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#d0d0d0;
+    left:-53px;
+    top:18px;
+}
+
+.complete .dot{
+    background:#2ecc71;
+}
+
+.current .dot{
+    background:#2ecc71;
+    box-shadow:0 0 15px #2ecc71;
 }
 
 .card{
-text-decoration:none;
-color:inherit;
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-transition:.25s;
+    background:white;
+    border:1px solid #ececec;
+    border-radius:18px;
+    padding:18px;
 }
 
-.card:hover{
-transform:translateY(-6px);
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
 }
 
-.card img{
-width:100%;
-height:250px;
-object-fit:cover;
+.blog-card{
+    text-decoration:none;
+    color:inherit;
+    background:white;
+    border:1px solid #ececec;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.2s;
 }
 
-.card-content{
-padding:20px;
+.blog-card:hover{
+    transform:translateY(-5px);
 }
 
-.article-container{
-max-width:900px;
-margin:auto;
-padding:50px 20px;
+.blog-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
-.article-container p{
-line-height:1.8;
-margin-bottom:20px;
+.blog-info{
+    padding:20px;
 }
 
-.article-hero img{
-width:100%;
-height:500px;
-object-fit:cover;
+.blog-info h3{
+    margin-bottom:10px;
 }
 
-.progress-row{
-margin-bottom:20px;
+.blog-info p{
+    color:#777;
 }
 
-.progress-row span{
-display:block;
-margin-bottom:8px;
-font-weight:600;
+.article{
+    max-width:900px;
+    margin:auto;
+    padding:50px 25px;
 }
 
-.bar{
-height:18px;
-background:#ddd;
-border-radius:999px;
-overflow:hidden;
+.article img{
+    width:100%;
+    border-radius:18px;
+    margin-bottom:30px;
 }
 
-.fill{
-height:100%;
-background:#58c42d;
+.article p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:25px;
+    text-decoration:none;
+    color:#111;
 }
