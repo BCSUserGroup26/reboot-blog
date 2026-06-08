@@ -1,4 +1,4 @@
-fetch("/blogs.json")
+fetch("./blogs.json")
 .then(response => response.json())
 .then(blogs => {
 
